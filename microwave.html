@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Microwave Link Status</title>
+  <style>
+    body {
+      background-color:white;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      border-color: orangered;
+      border-radius: 2px;
+      border: 10px groove black;
+    }
+
+    h3 {
+      text-align: center;
+      color: black;
+    }
+
+    .link-row {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin: 20px 0;
+    }
+
+    .box {
+      background-color: green;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-weight: bold;
+      min-width: 160px;
+      text-align: center;
+     border: 4px groove black;
+    }
+
+    .line-box {
+      position: relative;
+      width: 150px;
+      height: 25px;
+      margin: 0 10px;
+    }
+
+    .line {
+      position: absolute;
+      top: 15px;
+      height: 3px;
+      background-color: black;
+      width: 100%;
+      
+    }
+
+    .lat {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background: black;
+      color: #fff;
+      font-size: 10px;
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+
+    button {
+      margin-bottom: 30px;
+      padding: 8px 16px;
+      font-size: 14px;
+      display: block;
+      margin-left:550px;
+    }
+    .row-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+  </style>
+</head>
+<body>
+
+<h3><u>Microwave link status</u></h3>
+
+<div class="link-row ">
+  <div class="box">KARAIKAL</div>
+  <div class="line-box">
+    <div class="lat" id="lat1">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">SV3 MEMATHUR</div>
+  <div style="width: 150px;"></div> 
+  <div class="box">NALLUR</div>
+  <div class="line-box">
+    <div class="lat" id="lat24">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">THIRUMAKOTTAI</div>
+</div>
+
+<div class="link-row">
+  <div class="box">SV3 MEMATHUR</div>
+  <div class="line-box">
+    <div class="lat" id="lat2">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">KARAIKAL</div>
+  <div style="width: 150px;"></div> 
+   <div class="box">KARAIKAL</div>
+ <div class="line-box">
+    <div class="lat" id="lat25">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">SV-02</div>
+</div>
+
+<div class="link-row">
+  <div class="box">SV3 MEMATHUR</div>
+  <div class="line-box">
+    <div class="lat" id="lat3">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">DT KUT</div>
+   <div style="width: 150px;"></div> 
+ <div class="box">SV-02</div>
+  <div class="line-box">
+    <div class="lat" id="lat26">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">KARAIKAL</div>
+</div>
+
+<div class="link-row">
+  <div class="box">DT KUT</div>
+  <div class="line-box">
+    <div class="lat" id="lat4">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">SV3 MEMATHUR</div>
+   <div style="width: 150px;"></div> 
+  <div class="box">SV-02</div>
+  <div class="line-box">
+    <div class="lat" id="lat27">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">TORRENT GAS</div>
+</div>
+
+<div class="link-row">
+  <div class="box">MEMATHUR TOWER</div>
+  <div class="line-box">
+    <div class="lat" id="lat5">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">NEW BUILDING</div>
+   <div style="width: 150px;"></div> 
+ <div class="box">TORRENT GAS</div>
+  <div class="line-box">
+    <div class="lat" id="lat28">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">SV-02</div>
+</div>
+
+<div class="link-row">
+  <div class="box">NEW BUILDING</div>
+  <div class="line-box">
+    <div class="lat" id="lat6">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">MEMATHUR TOWER</div>
+    <div style="width: 150px;"></div> 
+   <div class="box">KARAIKAL</div>
+  <div class="line-box">
+    <div class="lat" id="lat29">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">HENKEL</div>
+</div>
+
+<div class="link-row">
+  <div class="box">DT KUT</div>
+  <div class="line-box">
+    <div class="lat" id="lat7">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">RT KUT</div>
+  <div style="width: 150px;"></div> 
+  <div class="box">HENKEL</div>
+ <div class="line-box">
+    <div class="lat" id="lat30">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">KARAIKAL</div>
+</div>
+
+<div class="link-row">
+  <div class="box">RT KUT</div>
+  <div class="line-box">
+    <div class="lat" id="lat8">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">DT KUT</div>
+  <div style="width: 150px;"></div> 
+  <div class="box">KARAIKAL</div>
+ <div class="line-box">
+    <div class="lat" id="lat31">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">HOEC</div>
+</div>
+<div class="link-row">
+  <div class="box">KARAIKAL</div>
+  <div class="line-box">
+    <div class="lat" id="lat9">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">NARIMANAM GCS</div>
+   <div style="width: 150px;"></div> 
+ <div class="box">HOEC</div>
+ <div class="line-box">
+    <div class="lat" id="lat32">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">KARAIKAL</div>
+</div>
+<div class="link-row">
+  <div class="box">NARIMANAM GCS</div>
+  <div class="line-box">
+    <div class="lat" id="lat10">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">KARAIKAL</div>
+   <div style="width: 150px;"></div> 
+ <div class="box">HOEC TOWER</div>
+  <div class="line-box">
+    <div class="lat" id="lat33">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">GAIL END</div>
+</div>
+<div class="link-row">
+  <div class="box">NARIMANAM GCS</div>
+  <div class="line-box">
+    <div class="lat" id="lat11">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">PPCL</div>
+  <div style="width: 150px;"></div> 
+   <div class="box">GAIL END</div>
+ <div class="line-box">
+    <div class="lat" id="lat34">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">HOEC TOWER</div>
+</div>
+
+<div class="link-row">
+  <div class="box">PPCL</div>
+  <div class="line-box">
+    <div class="lat" id="lat12">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">NARIMANAM GCS</div>
+   <div style="width: 150px;"></div> 
+   <div class="box">HOEC</div>
+  <div class="line-box">
+    <div class="lat" id="lat35">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">MADANAM</div>
+</div>
+
+<div class="link-row">
+  <div class="box">NARIMANAM GCS</div>
+  <div class="line-box">
+    <div class="lat" id="lat13">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">SV-01</div>
+   <div style="width: 150px;"></div> 
+ <div class="box">MADANAM</div>
+  <div class="line-box">
+    <div class="lat" id="lat36">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">HOEC</div>
+</div>
+
+<div class="link-row">
+  <div class="box">SV-01</div>
+  <div class="line-box">
+    <div class="lat" id="lat14">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">NARIMANAM GCS</div>
+  <div style="width: 150px;"></div> 
+ <div class="box">NEW BUILDING</div>
+ <div class="line-box">
+    <div class="lat" id="lat37">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">MADANAM GATE</div>
+</div>
+<div class="link-row">
+  <div class="box">NARIMANAM GCS</div>
+  <div class="line-box">
+    <div class="lat" id="lat15">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">AKM GCS</div>
+  <div style="width: 150px;"></div> 
+    <div class="box">MADANAM GATE</div>
+  <div class="line-box">
+    <div class="lat" id="lat38">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">NEW BUILDING</div>
+
+</div>
+
+<div class="link-row">
+  <div class="box">AKM GCS</div>
+  <div class="line-box">
+    <div class="lat" id="lat16">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">NARIMANAM GCS</div>
+   <div style="width: 150px;"></div> 
+<div class="box">MADANAM</div>
+ <div class="line-box">
+    <div class="lat" id="lat39">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">BHUVANAGIRI</div>
+</div>
+
+<div class="link-row">
+  <div class="box">AKM</div>
+  <div class="line-box">
+    <div class="lat" id="lat17">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">KAMALAPURAM</div>
+  <div style="width: 150px;"></div> 
+    <div class="box">BHUVANAGIRI</div>
+ <div class="line-box">
+    <div class="lat" id="lat40">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">MADANAM</div>
+</div>
+
+<div class="link-row">
+  <div class="box">KAMALAPURAM</div>
+  <div class="line-box">
+    <div class="lat" id="lat18">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">AKM</div>
+   <div style="width: 150px;"></div> 
+ <div class="box">TNEB RAMNAD</div>
+  <div class="line-box">
+    <div class="lat" id="lat41">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">DT RAMNAD</div>
+</div>
+
+<div class="link-row">
+  <div class="box">AKM</div>
+  <div class="line-box">
+    <div class="lat" id="lat19">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">NANNILAM</div>
+   <div style="width: 150px;"></div> 
+  <div class="box">DT RAMNAD</div>
+  <div class="line-box">
+    <div class="lat" id="lat42">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">TNEB RAMNAD</div>
+</div>
+<div class="link-row">
+  <div class="box">NANNILAM</div>
+  <div class="line-box">
+    <div class="lat" id="lat20">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">AKM</div>
+   <div style="width: 150px;"></div> 
+ <div class="box">DT RAMNAD</div>
+ <div class="line-box">
+    <div class="lat" id="lat43">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">AARKAY RAMNAD</div>
+</div>
+
+<div class="link-row">
+  <div class="box">NANNILAM</div>
+  <div class="line-box">
+    <div class="lat" id="lat21">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">THIRUMAKOTTAI</div>
+   <div style="width: 150px;"></div> 
+   <div class="box">AARKAY RAMNAD</div>
+  <div class="line-box">
+    <div class="lat" id="lat44">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box"> DT RAMNAD</div>
+</div>
+<div class="link-row">
+  <div class="box">THIRUMAKOTTAI</div>
+  <div class="line-box">
+    <div class="lat" id="lat22">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">NANNILAM</div>
+   <div style="width: 150px;"></div> 
+   <div class="box">TNEB RAMNAD</div>
+  <div class="line-box">
+    <div class="lat" id="lat45">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">CORROMANDAL</div>
+</div>
+<div class="link-row">
+  <div class="box">THIRUMAKOTTAI</div>
+  <div class="line-box">
+    <div class="lat" id="lat23">--</div>
+    <div class="line"></div>
+  </div>
+  <div class="box">NALLUR</div>
+   <div style="width: 150px;"></div> 
+  <div class="box">CORROMANDAL</div>
+  <div class="line-box">
+    <div class="lat" id="lat46">--</div>
+    <div class="line"></div>
+  </div> 
+  <div class="box">TNEB RAMNAD</div>
+</div>
+
+<script>
+  const linkPairs = [
+  ["lat1", "lat24"],
+  ["lat2", "lat25"],
+  ["lat3", "lat26"],
+  ["lat4", "lat27"],
+  ["lat5", "lat28"],
+  ["lat6", "lat29"],
+  ["lat7", "lat30"],
+  ["lat8", "lat31"],
+  ["lat9", "lat32"],
+  ["lat10", "lat33"],
+  ["lat11", "lat34"],
+  ["lat12", "lat35"],
+  ["lat13", "lat36"],
+  ["lat14", "lat37"],
+  ["lat15", "lat38"],
+  ["lat16", "lat39"],
+  ["lat17", "lat40"],
+  ["lat18", "lat41"],
+  ["lat19", "lat42"],
+  ["lat20", "lat43"],
+  ["lat21", "lat44"],
+  ["lat22", "lat45"],
+  ["lat23", "lat46"]
+];
+
+const latencyStatus = {}; 
+
+ window.microwaveAPI.requestLatency();
+
+window.microwaveAPI.onLatencyUpdate(({ id, latency }) => {
+  const lat = document.getElementById(id);
+  if (lat) {
+    lat.textContent = latency;
+
+    if (latency === "Timeout") {
+      lat.style.backgroundColor = "red";
+    } else if (parseFloat(latency) > 100) {
+      lat.style.backgroundColor = "orange";
+    } else {
+      lat.style.backgroundColor = "black";
+    }
+  }
+});
+
+</script>
+</body>
+</html>
